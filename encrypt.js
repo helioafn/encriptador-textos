@@ -24,10 +24,14 @@ function criptografar() {
   exibirTexto(textoCodificado, "campo-saida");
 }
 
-function decodificar(textoCodificado) {
-  // Lógica para descriptografar aqui
-  let arrayTexto = textoCodificado.split("");
-  let textoDecodificado = "";
+function decodificar() {
+  let texto = document.getElementById("campo-entrada").value;
+  let textoDecodificado = texto;
+  textoDecodificado = textoDecodificado.replaceAll(/ai/g, 'a');
+  textoDecodificado = textoDecodificado.replaceAll(/enter/g, 'e');
+  textoDecodificado = textoDecodificado.replaceAll(/imes/g, 'i');
+  textoDecodificado = textoDecodificado.replaceAll(/ober/g, 'o');
+  textoDecodificado = textoDecodificado.replaceAll(/ufat/g, 'u');
   exibirTexto(textoDecodificado, "campo-saida");
 }
 
